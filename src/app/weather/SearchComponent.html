@@ -3,7 +3,7 @@
     <form (ngSubmit)="onSubmit()"> 
 
 <label for="city">City</label>
-<input type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" >
+<input type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" (input)="OnSearch(input.value)" #input>
 <button type="submit">Add {{city}}</button>
     </form>
 
